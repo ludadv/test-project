@@ -1,0 +1,28 @@
+.menu {
+  display: none;
+  flex-direction: column;
+  &.show {
+    display: block;
+    position: absolute;
+  }
+  @media screen and (min-width: $breakpoint-df) {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  &__item {
+    padding: rem(12);
+    border-radius: rem(5);
+    border: 1px transparent solid;
+    transition: border-color .3s linear;
+    &:hover {
+      border-color: $white;
+
+    }
+  }
+  &__link {
+    display: block;
+    font-size: rem(14);
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+}

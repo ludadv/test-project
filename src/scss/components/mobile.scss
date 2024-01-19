@@ -1,0 +1,29 @@
+.mobile-header {
+  position: relative;
+  &__btn {
+    display: block;
+    @media screen and (min-width: $breakpoint-df) {
+      display: none;
+    }
+    &_open {
+      display: none;
+    }
+    &_close {
+      display: block;
+      fill: $white;
+    }
+    &.toggle {
+      .mobile-header {
+        &__btn {
+          &_open {
+            display: block;
+            fill: $burgundy;
+          }
+          &_close {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
